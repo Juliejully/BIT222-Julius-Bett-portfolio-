@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JULIUS BETT PORTFOLIO</h1>
+            <p>WELCOME TO JULIUS BETT PORTFOLIO WEBSITE</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="product.html">PRODUCT</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>123 Main Street, Cityville, State, 12345</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+
+        <div class="social-links">
+            <h2>Connect with Us</h2>
+            <ul>
+                <li><a href="#" target="_blank">Facebook</a></li>
+                <li><a href="#" target="_blank">Twitter</a></li>
+                <li><a href="#" target="_blank">Instagram</a></li>
+                <!-- Add more social media links as needed -->
+            </ul>
+        </div>
+
+        <p>Latitude: <span id="latitude">40.7128</span></p>
+        <p>Longitude: <span id="longitude">-74.0060</span></p>
+        <div id="map" style="height: 400px;"></div>
+
+    </div>
+    <script>
+      // Initialize map with specified coordinates
+      function initMap() {
+          var latitude = parseFloat(document.getElementById('latitude').innerText);
+          var longitude = parseFloat(document.getElementById('longitude').innerText);
+          var location = {lat: latitude, lng: longitude};
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 12,
+              center: location
+          });
+
+          var marker = new google.maps.Marker({
+              position: location,
+              map: map
+          });
+      }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <footer>
+        <div class="social-media-links">
+            <li><a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/YourPage" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.youtube.com/user/YourChannel" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                  </div>
+        <p>&copy; 2024 Copy Rights. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
